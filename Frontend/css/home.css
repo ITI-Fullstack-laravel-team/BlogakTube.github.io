@@ -31,7 +31,7 @@ display: flex;
 
 }
 p{
-    color: white;
+    color: black;
     margin: 0;
     padding-top: 25px;
     padding-left:0 ;
@@ -45,11 +45,15 @@ p{
 .logo img{
     width: 70px; 
 }
+.pop-posts{
+    display: flex ;
+    justify-content: center;
+}
 .post-box {
     display: flex;
     flex-direction: column;
-    height: 220px;
-    width: 250px;
+    height: 500px;
+    width: 400px;
     display: inline-block;
     margin: 20px;
     overflow: hidden;
@@ -59,9 +63,41 @@ p{
     opacity: 1;
     border: 1px solid transparent;
     padding: 5px;
+    
 }
 .pop-posts {
     padding: 0 50px;
     overflow: auto;
     white-space: nowrap;
+}
+.pop-posts img{
+    width: 100%;
+    height: 250px;
+}
+ a {
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+   
+}
+button{
+    
+    background-color: blueviolet;
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 50px;
+}
+.creation button{
+    margin-block-start: 200px;
+}
+h1 {
+    padding-left: 50px;
+    margin-top: 0;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
