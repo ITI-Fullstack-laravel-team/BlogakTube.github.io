@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Frontend/css/signuplogin.css">
+    <script src="/Frontend/js/script.js"></script>
     <title>Login</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="col1">
+            <img src="/Frontend/Media/images/Logo-removebg-preview.png" alt="">
+        </div>
+        <div class="col2">
+            <div class="header">
+                <p>Don't have account ? <button onclick="goToRegister()">Register</button></p>
+            </div>
+            <div class="form-section">
+                <h1>Welcome to BlogakTube!</h1><br>
+                <p>Login to Blogak</p><br><br><br>
+                <form action="/Frontend/html/home.html" method="post">
+                    <label id="login-email-label" for="email">Email:</label><br>
+                    <input id="login-email-input" type="email" id="email" name="email" required
+                        placeholder="Enter your Email"><br><br><br><br>
+                    <label id="login-pass-label" for="password">Password:</label><br>
+                    <input id="login-password-input" type="password" id="password" name="password" required
+                        placeholder="Enter your Password"><br><br>
+                    <input type="submit" value="Login" id="submit">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
