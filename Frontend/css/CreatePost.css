@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form-container, .post-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  input[type="submit"]:hover, button:hover {
+    background-color: #218838;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .post-container {
+    display: none;
+  }
+
+  .edit-mode {
+    background-color: #007bff;
+    margin-top: 10px;
+  }
+
+  .edit-mode:hover {
+    background-color: #0069d9;
+  }
