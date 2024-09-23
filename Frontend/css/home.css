@@ -31,7 +31,7 @@ display: flex;
 
 }
 p{
-    color: white;
+    color: black;
     margin: 0;
     padding-top: 25px;
     padding-left:0 ;
@@ -45,11 +45,15 @@ p{
 .logo img{
     width: 70px; 
 }
+.pop-posts{
+    display: flex ;
+    justify-content: center;
+}
 .post-box {
     display: flex;
     flex-direction: column;
-    height: 220px;
-    width: 250px;
+    height: 500px;
+    width: 400px;
     display: inline-block;
     margin: 20px;
     overflow: hidden;
@@ -59,6 +63,7 @@ p{
     opacity: 1;
     border: 1px solid transparent;
     padding: 5px;
+    
 }
 .pop-posts {
     padding: 0 50px;
@@ -66,8 +71,8 @@ p{
     white-space: nowrap;
 }
 .pop-posts img{
-    width: 250px;
-    height: 150px;
+    width: 100%;
+    height: 250px;
 }
  a {
     color: white;
