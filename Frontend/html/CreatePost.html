@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create and Edit Post</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .form-container, .post-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    input[type="submit"], button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover, button:hover {
+      background-color: #218838;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .post-container {
+      display: none;
+    }
+
+    .edit-mode {
+      background-color: #007bff;
+      margin-top: 10px;
+    }
+
+    .edit-mode:hover {
+      background-color: #0069d9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Create Post</h2>
+    <form id="postForm">
+      <input type="text" id="postTitle" placeholder="Post Title" required>
+      <textarea id="postContent" placeholder="Post Content" required></textarea>
+      <input type="submit" value="Create Post">
+    </form>
+  </div>
+
+  <div class="post-container" id="createdPost">
+    <h2 id="displayTitle">Post Title</h2>
+    <p id="displayContent">Post content goes here...</p>
+    <button class="edit-mode" onclick="editPost()">Edit Post</button>
+  </div>
+
+  <script>
+    // Reference to form and post container
+    const postForm = document.getElementById('postForm');
+    const createdPost = document.getElementById('createdPost');
+    const postTitle = document.getElementById('postTitle');
+    const postContent = document.getElementById('postContent');
+    const displayTitle = document.getElementById('displayTitle');
+    const displayContent = document.getElementById('displayContent');
+    let isEditing = false;
+
+    // Handle Create Post / Edit Post Submit
+    postForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (isEditing) {
+        // If editing, update the post content
+        displayTitle.innerText = postTitle.value;
+        displayContent.innerText = postContent.value;
+        isEditing = false;
+        postForm.querySelector('input[type="submit"]').value = 'Create Post';
+      } else {
+        // Display the created post
+        displayTitle.innerText = postTitle.value;
+        displayContent.innerText = postContent.value;
+        createdPost.style.display = 'block';
+      }
+
+      // Clear input fields
+      postTitle.value = '';
+      postContent.value = '';
+    });
+
+    // Edit Post Functionality
+    function editPost() {
+      // Fill the form with current post data
+      postTitle.value = displayTitle.innerText;
+      postContent.value = displayContent.innerText;
+
+      // Change button text
+      postForm.querySelector('input[type="submit"]').value = 'Save Changes';
+      isEditing = true;
+    }
+  </script>
+</body>
+</html>
