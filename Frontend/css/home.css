@@ -65,3 +65,34 @@ p{
     overflow: auto;
     white-space: nowrap;
 }
+.pop-posts img{
+    width: 250px;
+    height: 150px;
+}
+ a {
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+   
+}
+button{
+    
+    background-color: blueviolet;
+    border-radius: 20px;
+    height: 30px;
+    margin-right: 50px;
+}
+.creation button{
+    margin-block-start: 200px;
+}
+h1 {
+    padding-left: 50px;
+    margin-top: 0;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
