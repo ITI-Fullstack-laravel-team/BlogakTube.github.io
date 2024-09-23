@@ -13,6 +13,7 @@ body {
     height: 100vh;
 }
 
+/* Start Signup and login styles */
 .container {
     background-color: #ffffff;
     display: flex;
@@ -133,3 +134,25 @@ input[type="radio"] {
     transition: 0.4s;
     background-color: rgb(37, 6, 67);
 }
+
+/* End signup and login styles */
+
+/* some styles to login */
+#login-pass-label,
+#login-email-label {
+    font-size: 20px;
+}
+
+#login-email-input,
+#login-password-input {
+    width: 70%;
+    height: 35px;
+    border-radius: 4px;
+    padding: 10px;
+    color: rgb(31, 4, 53);
+    border: 1px solid rgb(199, 52, 192);
+    margin-top: 10px;
+    background-color: rgb(237, 221, 252);
+}
+
+/* end login styles */
