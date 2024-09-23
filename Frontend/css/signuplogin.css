@@ -23,7 +23,7 @@ body {
 }
 
 .col1 {
-    background-color: rgb(202, 164, 237);
+    background-color: rgb(37, 6, 67);
     width: 35%;
     display: flex;
     align-items: center;
@@ -34,10 +34,12 @@ body {
 .col2 {
     width: 65%;
     height: 100%;
+    background-color: rgb(255, 255, 255);
 }
 
 .col1 img {
     width: 100%;
+    padding-left: 10px;
 }
 
 .header {
@@ -50,13 +52,13 @@ body {
     color: rgb(151, 151, 151);
 }
 
-.form-section h2 {
-    color: rgb(71, 7, 130);
+.form-section h1 {
+    color: rgb(72, 4, 136);
 }
 
 .header button {
     color: white;
-    background-color: rgb(178, 123, 229);
+    background-color: rgb(164, 82, 241);
     width: 70px;
     height: 30px;
     border-radius: 20px;
@@ -74,7 +76,9 @@ body {
 }
 
 .form-section label {
-    color: rgb(12, 6, 17);
+    color: rgb(76, 12, 86);
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-section p {
@@ -91,5 +95,10 @@ body {
     height: 25px;
     border-radius: 4px;
     padding: 5px;
-    color: rgb(24, 4, 42);
+    color: rgb(32, 2, 57);
+}
+
+#submit {
+    margin-left: 50%;
+    margin-right: 50%;
 }
