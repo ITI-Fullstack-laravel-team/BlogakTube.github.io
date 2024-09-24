@@ -5,46 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Post</title>
   <link rel="stylesheet" href="/Frontend/css/home.css">
-  <link rel="stylesheet" href="/Frontend/css/CreatePost.css">
-  <link rel="stylesheet" href="/Frontend/html/CreatePost.html">
-
-  
+  <link rel="stylesheet" href="/Frontend/css/EditPost.css">
 </head>
 <body>
-  <header>
+    <header>
     
-    <div class="logo">
-         <img src="../Media/images/Logo-removebg-preview.png" alt="My Website Logo">
-         <h2>BlogakTube</h2>
+      <div class="logo">
+           <img src="../Media/images/Logo-removebg-preview.png" alt="My Website Logo">
+           <h2>BlogakTube</h2>
+      </div>
+  
+      <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          
+      </div>
+      <div class="navigation">
+              <a href="home.html">Home</a>
+              <a href="profile.html">My profile</a>
+              <a href="login.html">Logout</a>
+      </div>
+  
+  </header>
+  <center>
+    <div class="form-container">
+      <h2>Edit Post</h2>
+      <form action="/edit-post">
+        <input type="text" name="title" value="Current Post Title" required>
+        <textarea name="content" required>Current Post Content</textarea>
+        <input type="submit" value="Save Changes">
+        <div class="post-actions">
+          <button class="delete-btn">Delete</button>
+      </div>
+      </form>
     </div>
-
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
+  </center>
+  <!-- <div class="post-list">
+    <h2>Posts</h2>
+    <div class="post">
+        <h3>Sample Post Title</h3>
+        <p>This is a sample post content.</p>
         
-    </div>
-    <div class="navigation">
-            <a href="#home">Home</a>
-            <a href="#profile">My profile</a>
-            <a href="#">Logout</a>
-    </div>
-
-</header>
-<center>
-  <!-- <div class="form-container">
-  <h2>Create Post</h2>
-  <form id="postForm" action="/Frontend/html/home.html" method="post" >
-    <input type="text" id="postTitle" placeholder="Post Title" required>
-    <textarea id="postContent" placeholder="Post Content" required></textarea>
-    <input type="submit" value="Create Post">
-  </form>
-</div>  -->
-
-<div class="post-container" id="createdPost">
-  <h2 id="displayTitle">Post Title</h2>
-  <p id="displayContent">Post content goes here...</p>
-  <button class="edit-mode" onclick="editPost()">Edit Post</button>
-</div>
-</center>
+    </div> -->
 </body>
 </html>
-
