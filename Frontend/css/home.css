@@ -33,7 +33,7 @@ display: flex;
 p{
     color: black;
     margin: 0;
-    padding-top: 25px;
+    padding-top: 5px;
     padding-left:0 ;
 }
 
@@ -41,6 +41,9 @@ p{
     color: white;
     text-decoration: none;
     padding: 18px;
+}
+.navigation a:hover {
+  color: rgb(172, 95, 214);
 }
 .logo img{
     width: 70px; 
@@ -87,6 +90,10 @@ button{
     height: 30px;
     margin-right: 50px;
 }
+button:hover{
+    background-color: rgb(37, 6, 67);
+ 
+}
 .creation button{
     margin-block-start: 200px;
 }
@@ -100,4 +107,8 @@ h1 {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+.middle {
+    margin: 80px;
+    margin-left: 280px;
 }
