@@ -63,26 +63,41 @@ p {
 
 .post-box {
     display: flex;
+    animation: slideInRight 0.5s ease-in-out;
     flex-direction: column;
     height: 500px;
     width: 400px;
     display: inline-block;
     margin: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px rgb(175, 172, 172);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.151);
     border-radius: 4px;
-    transition: 0.5s;
+    transition: all 0.10s ease-in-out;
+    cursor: pointer;
     opacity: 1;
     border: 1px solid transparent;
     padding: 5px;
 
 }
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
 
+    100% {
+        transform: translateX(0);
+    }
+}
+.post-box:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #542daf4b;
+}
 .pop-posts {
     padding: 0 50px;
     overflow: auto;
     white-space: nowrap;
 }
+
 
 .pop-posts img {
     width: 100%;
