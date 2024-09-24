@@ -23,6 +23,7 @@ body {
     border-radius: 7px;
 }
 
+/* image column */
 .col1 {
     background-color: rgb(37, 6, 67);
     width: 35%;
@@ -38,6 +39,7 @@ body {
 }
 
 
+/* form column */
 .col2 {
     width: 70%;
     height: 100%;
