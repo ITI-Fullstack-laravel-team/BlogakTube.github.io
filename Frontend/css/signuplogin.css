@@ -190,3 +190,98 @@ input::placeholder {
 }
 
 /* end login styles */
+
+/* Responsiveness */
+@media (max-width: 1525px) {
+    body {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 1372px) {
+    body {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 1222px) {
+    body {
+        zoom: 0.6;
+    }
+
+    .col1 {
+        display: initial;
+        align-items: initial;
+    }
+
+    .col1 img {
+        padding-top: 150px;
+    }
+}
+
+@media (max-width: 690px) {
+    .col1 {
+        display: none;
+    }
+
+    .form-section {
+        margin-left: 70px;
+    }
+
+    .container {
+        width: 40%;
+        height: 100%;
+    }
+
+    .header {
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    #submit,
+    #submitlogin {
+        width: 190px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        zoom: 0.5;
+    }
+
+    #submit,
+    #submitlogin {
+        margin-left: 40px;
+    }
+
+    .header {
+        display: initial;
+        justify-content: initial;
+
+    }
+
+    .header p {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 546px) {
+
+    body {
+        zoom: 0.4;
+    }
+
+    #submit,
+    #submitlogin {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 404px) {
+
+    #submit,
+    #submitlogin {
+        font-size: 14px;
+    }
+}
