@@ -1,60 +1,61 @@
-body{
-    font-family:Arial, Helvetica, sans-serif ;
-     }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    .form-container, .post-container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 600px;
-      margin-top: 10%;
-      height: 400px;
-     
-    }
+.form-container,
+.post-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin-top: 50px;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
 
-  textarea {
-    height: 150px;
-    resize: none;
-  }
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(37, 6, 67);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
+textarea {
+  height: 150px;
+  resize: none;
+}
 
-  input[type="submit"]:hover {
-    background-color: rgb(37, 6, 67);
-  }
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(37, 6, 67);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
 
- button{
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(37, 6, 67);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-   height: 35px;
- }
+input[type="submit"]:hover {
+  background-color: rgb(37, 6, 67);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(37, 6, 67);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 35px;
+}
