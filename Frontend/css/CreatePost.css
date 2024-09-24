@@ -1,8 +1,8 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    body{
-    font-family:Arial, Helvetica, sans-serif ;
-     }
-    /* body {
+/* body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 50px;
@@ -12,69 +12,73 @@
       align-items: center;
       flex-direction: column;
     }  */
-      /* .form-container{
+/* .form-container{
         margin-top: 50%;
         margin-bottom: 50%;
       } */
 
-    .form-container, .post-container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 600px;
-      margin-top: 10%;
-      height: 400px;
-     
-    }
+.form-container,
+.post-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin-top: 10%;
+  height: 400px;
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+}
 
-    input[type="text"], textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    textarea {
-      height: 100px;
-      resize: none;
-    }
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-    input[type="submit"], button {
-      width: 100%;
-      padding: 10px;
-      background-color:  rgb(37, 6, 67);
-      border: none;
-      border-radius: 5px;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+textarea {
+  height: 100px;
+  resize: none;
+}
 
-    input[type="submit"]:hover, button:hover {
-      background-color:  rgb(37, 6, 67);
-    }
+input[type="submit"],
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(37, 6, 67);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-    .hidden {
-      display: none;
-    }
+input[type="submit"]:hover,
+button:hover {
+  background-color: rgb(37, 6, 67);
+}
 
-    .post-container {
-      display: none;
-    }
+.hidden {
+  display: none;
+}
 
-    .edit-mode {
-      background-color:  rgb(37, 6, 67);
-      margin-top: 10px;
-    }
+.post-container {
+  display: none;
+}
 
-    .edit-mode:hover {
-      background-color:  rgb(37, 6, 67);
-    }
+.edit-mode {
+  background-color: rgb(37, 6, 67);
+  margin-top: 10px;
+}
+
+.edit-mode:hover {
+  background-color: rgb(37, 6, 67);
+}
