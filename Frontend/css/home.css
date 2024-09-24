@@ -1,6 +1,7 @@
-body{
-    font-family:Arial, Helvetica, sans-serif ;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 header {
     background-color: rgb(37, 6, 67);
     color: white;
@@ -12,29 +13,33 @@ header {
 
 
 .search-bar {
-   width: 50%;
-   padding-left: 250px;
+    width: 50%;
+    padding-left: 250px;
 }
+
 .navigation {
-   padding: 25px 0;
+    padding: 25px 0;
 }
+
 .search-bar input[type="text"] {
     width: 80%;
     padding: 5px;
     margin: 13px;
     border-radius: 15px;
     height: 25px;
-    
-}
-.logo{
-display: flex;
 
 }
-p{
+
+.logo {
+    display: flex;
+
+}
+
+p {
     color: black;
     margin: 0;
     padding-top: 5px;
-    padding-left:0 ;
+    padding-left: 0;
 }
 
 .navigation a {
@@ -42,16 +47,20 @@ p{
     text-decoration: none;
     padding: 18px;
 }
+
 .navigation a:hover {
-  color: rgb(172, 95, 214);
+    color: rgb(172, 95, 214);
 }
-.logo img{
-    width: 70px; 
+
+.logo img {
+    width: 70px;
 }
-.pop-posts{
-    display: flex ;
+
+.pop-posts {
+    display: flex;
     justify-content: center;
 }
+
 .post-box {
     display: flex;
     flex-direction: column;
@@ -66,37 +75,44 @@ p{
     opacity: 1;
     border: 1px solid transparent;
     padding: 5px;
-    
+
 }
+
 .pop-posts {
     padding: 0 50px;
     overflow: auto;
     white-space: nowrap;
 }
-.pop-posts img{
+
+.pop-posts img {
     width: 100%;
     height: 250px;
 }
- a {
+
+a {
     color: white;
     text-decoration: none;
     padding: 18px;
-   
+
 }
-button{
-    
+
+button {
+
     background-color: blueviolet;
     border-radius: 20px;
     height: 30px;
     margin-right: 50px;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(37, 6, 67);
- 
+
 }
-.creation button{
+
+.creation button {
     margin-block-start: 200px;
 }
+
 h1 {
     padding-left: 50px;
     margin-top: 0;
@@ -108,7 +124,20 @@ h1 {
     justify-content: space-between;
     margin-top: 20px;
 }
+
 .middle {
     margin: 80px;
     margin-left: 280px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(37, 6, 67);
+    height: 60px;
+}
+
+footer p {
+    color: white;
 }

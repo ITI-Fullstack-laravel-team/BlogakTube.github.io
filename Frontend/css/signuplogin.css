@@ -23,6 +23,7 @@ body {
     border-radius: 7px;
 }
 
+/* image column */
 .col1 {
     background-color: rgb(37, 6, 67);
     width: 35%;
@@ -32,17 +33,20 @@ body {
     height: 100%;
 }
 
+.col1 img {
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+/* form column */
 .col2 {
-    width: 65%;
+    width: 70%;
     height: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
 }
 
-.col1 img {
-    width: 100%;
-    padding-left: 10px;
-}
 
 .header {
     display: flex;
@@ -52,6 +56,11 @@ body {
     font-weight: bold;
     align-items: center;
     color: rgb(122, 119, 119);
+}
+
+.form-section {
+    width: 100%;
+    height: 100%;
 }
 
 .form-section h1 {
@@ -97,8 +106,8 @@ body {
 #password,
 #repassword {
     width: 70%;
-    height: 25px;
-    border-radius: 4px;
+    height: 30px;
+    border-radius: 20px;
     padding: 10px;
     color: rgb(31, 4, 53);
     border: 1px solid rgb(199, 52, 192);
@@ -112,6 +121,10 @@ input[type="radio"] {
 
 }
 
+input::placeholder {
+    font-size: 15px;
+}
+
 .labelgender {
     margin-right: 10px;
 }
@@ -121,12 +134,12 @@ input[type="radio"] {
     /* margin-right: 50%; */
     background-color: rgb(131, 68, 191);
     border-radius: 30px;
-    width: 25%;
-    height: 37px;
+    width: 26%;
+    height: 45px;
     border: 1px solid white;
     color: #ffffff;
-    font-size: 15px;
-    margin-top: 20px;
+    font-size: 17px;
+    margin-top: 30px;
 
 }
 
@@ -141,19 +154,39 @@ input[type="radio"] {
 /* some styles to login */
 #login-pass-label,
 #login-email-label {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #login-email-input,
 #login-password-input {
     width: 70%;
-    height: 35px;
-    border-radius: 4px;
+    height: 45px;
+    border-radius: 30px;
     padding: 10px;
     color: rgb(31, 4, 53);
     border: 1px solid rgb(199, 52, 192);
     margin-top: 10px;
     background-color: rgb(237, 221, 252);
+}
+
+#submitlogin {
+    margin-left: 30%;
+    /* margin-right: 50%; */
+    background-color: rgb(131, 68, 191);
+    border-radius: 30px;
+    width: 30%;
+    height: 45px;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 70px;
+
+}
+
+#submitlogin:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(37, 6, 67);
 }
 
 /* end login styles */
