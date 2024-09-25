@@ -1,8 +1,13 @@
 /* بسم الله */
+@import url('https://fonts.cdnfonts.com/css/open-sans');
 body {
     margin: 0;
-    animation: slideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    /* animation: slideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1); */
     font-family: Arial, Helvetica, sans-serif;
+    /* will-change: transform, opacity; */
+}
+.mainDiv{
+    animation: slideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     will-change: transform, opacity;
 }
 
@@ -260,4 +265,12 @@ span {
 }
 .postsTilte{
     color: #000000;
+}
+.postDescription{
+    font-family: 'Open Sans Light', sans-serif;
+}
+.CommentImage{
+    margin:22px;
+    width: 75px;
+    height: 75px;
 }
