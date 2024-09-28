@@ -26,11 +26,18 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'username', 'location', 'bio', 'facebook', 'instagram', 'twitter', 'github', 'linkedin',
     ];
+    
+    // dwefine relationship with the favorites Posts
+    public function favorites()
+    {
+        return $this->belongsToMany(Post::class, 'favorites');
+    }
+    
+    
 
     /**
      * The attributes that should be hidden for serialization.
