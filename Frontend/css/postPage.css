@@ -1,0 +1,276 @@
+/* بسم الله */
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+body {
+    margin: 0;
+    /* animation: slideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1); */
+    font-family: Arial, Helvetica, sans-serif;
+    /* will-change: transform, opacity; */
+}
+.mainDiv{
+    animation: slideUp 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: transform, opacity;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainDiv {
+    display: flex;
+    margin: 12px;
+}
+
+.postLikes {
+    display: flex;
+}
+
+span {
+    color: #542dafb9;
+}
+.postCommentContainer{
+    display: flex;
+    animation: slideInRight 0.5s ease-in-out;
+    width: 95%;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.151);
+    margin-bottom: 12px;
+    transition: all 0.10s ease-in-out;
+    cursor: pointer;
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.postCommentContainer:hover {
+    transform: scale(1.0);
+    box-shadow: 5px 5px 10px #542daf4b;
+}
+
+.posts {
+    display: flex;
+    animation: slideInRight 0.5s ease-in-out;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.151);
+    margin-bottom: 12px;
+    transition: all 0.10s ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.posts:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #542daf4b;
+}
+
+.postsOwner {
+    color: #542daf9d;
+}
+
+.postBody {
+    display: flex;
+}
+
+.postLikeIcon {
+    width: 25px;
+    height: 25px;
+    margin: 15px 5px 0px 0px;
+    cursor: pointer;
+    transition: all 0.10s ease-in-out;
+}
+
+.postLikeIcon:hover {
+    transform: scale(1.3);
+}
+
+.editAndDeletePost {
+    margin: 0px 22px 0px 0px;
+    display: flex;
+    float: right;
+}
+
+.postNoOfLikes {
+    margin-right: 5px;
+}
+
+.rightPostsImage {
+    width: 100px;
+    height: 70px;
+    margin: 12px 15px 15px;
+    border-radius: 9px;
+}
+
+.editPostIcon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.10s ease-in-out;
+}
+
+.editPostIcon:hover {
+    transform: scale(1.3);
+    
+}
+
+.deletePostIcon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: all 0.10s ease-in-out;
+}
+
+.deletePostIcon:hover {
+    transform: scale(1.3);
+}
+
+
+.userInfo {
+    display: flex;
+}
+
+.postDate {
+    display: flex;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin: 12px 12px 0px 0px;
+
+}
+
+.postsDesciption {
+    margin-bottom: 25px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.postsDescriptionRightPart {
+    margin-bottom: 0px;
+}
+
+.rightPart {
+    margin: 12px 12px 12px 22px;
+    display: block;
+}
+
+.accontIcon {
+    width: 65px;
+    height: 65px;
+    margin: 12px 15px 0px 0px;
+}
+
+.userBio {
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #777777;
+}
+
+.username {
+    margin-bottom: 5px;
+}
+
+.Date {
+    margin: 0;
+    font-size: 12px;
+    color: #2020208a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.user{
+    margin-bottom: 22px;
+}
+
+.postImage {
+    margin: 12px 0px 0px 0px;
+    width: 920px;
+    height: 510px;
+    border-radius: 25px;
+}
+.postText{
+    margin-right: 25px;
+}
+.postDescription {
+    font-size: 14px;
+    font-style: normal;
+}
+
+.postInfo {
+    margin-left: 22px;
+}
+.line{
+    width: 95%;
+    height: 1px;
+    border-radius: 5px;
+    background-color: rgb(209, 209, 209);
+}
+.postComments{
+    display: flex;
+    margin-left: 25px;
+}
+.postNoOfLikesAndComments{
+    display: flex;
+}
+.postLikesIcon{
+    margin: 20px 5px 0px 0px;
+    width: 15px;
+    height: 15px;
+}
+.postCommentsIcon{
+    margin: 20px 5px 0px 0px;
+    width: 15px;
+    height: 15px;
+
+}
+.postNoOfComments{
+    margin-right: 5px;
+}
+.postInteractive{
+    display: flex;
+    margin-bottom: 25px;
+}
+.likesText,.commentsText,.postNoOfComments,.postNoOfLikes{
+    color: #303030;
+    font-size: 14px;
+}
+.postCommentDescription{
+    color: #000000;
+}
+.postsTilte{
+    color: #000000;
+}
+.postDescription{
+    font-family: 'Open Sans Light', sans-serif;
+}
+.CommentImage{
+    margin:22px;
+    width: 75px;
+    height: 75px;
+}

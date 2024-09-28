@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Start Signup and login styles */
+.container {
+    background-color: #ffffff;
+    display: flex;
+    height: 80%;
+    width: 70%;
+    box-shadow: 0px 0px 40px rgb(214, 210, 210);
+    border-radius: 7px;
+}
+
+/* image column */
+.col1 {
+    background-color: rgb(37, 6, 67);
+    width: 35%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px 0px 0px 7px;
+    height: 100%;
+}
+
+.col1 img {
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+/* form column */
+.col2 {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+
+.header {
+    display: flex;
+    padding: 3%;
+    justify-content: end;
+    font-size: .8rem;
+    font-weight: bold;
+    align-items: center;
+    color: rgb(122, 119, 119);
+}
+
+.form-section {
+    width: 100%;
+    height: 100%;
+}
+
+.form-section h1 {
+    color: rgb(72, 4, 136);
+    font-size: 35px;
+}
+
+.header button {
+    color: white;
+    background-color: rgb(131, 68, 191);
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-size: 13px;
+}
+
+.header button:hover {
+    background-color: rgb(37, 6, 67);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-section {
+    padding-left: 35px;
+}
+
+.form-section label {
+    color: rgb(76, 12, 86);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-section p {
+    font-size: .8rem;
+    font-weight: bold;
+    color: rgb(122, 119, 119);
+    font-size: 14px;
+}
+
+#name,
+#email,
+#password,
+#repassword {
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    color: rgb(31, 4, 53);
+    border: 1px solid rgb(199, 52, 192);
+    margin-top: 7px;
+    background-color: rgb(237, 221, 252);
+}
+
+input[type="radio"] {
+    accent-color: rgb(188, 60, 221);
+    margin-right: 15px;
+
+}
+
+input::placeholder {
+    font-size: 15px;
+}
+
+.labelgender {
+    margin-right: 10px;
+}
+
+#submit {
+    margin-left: 30%;
+    /* margin-right: 50%; */
+    background-color: rgb(131, 68, 191);
+    border-radius: 30px;
+    width: 26%;
+    height: 45px;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 17px;
+    margin-top: 30px;
+
+}
+
+#submit:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(37, 6, 67);
+}
+
+/* End signup and login styles */
+
+/* some styles to login */
+#login-pass-label,
+#login-email-label {
+    font-size: 22px;
+}
+
+#login-email-input,
+#login-password-input {
+    width: 70%;
+    height: 45px;
+    border-radius: 30px;
+    padding: 10px;
+    color: rgb(31, 4, 53);
+    border: 1px solid rgb(199, 52, 192);
+    margin-top: 10px;
+    background-color: rgb(237, 221, 252);
+}
+
+#submitlogin {
+    margin-left: 30%;
+    /* margin-right: 50%; */
+    background-color: rgb(131, 68, 191);
+    border-radius: 30px;
+    width: 30%;
+    height: 45px;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 70px;
+
+}
+
+#submitlogin:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgb(37, 6, 67);
+}
+
+/* end login styles */

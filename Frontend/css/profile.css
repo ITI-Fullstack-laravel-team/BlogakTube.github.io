@@ -1,0 +1,352 @@
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+}
+
+
+h1,
+h2 {
+    color: rgba(255, 255, 255, 1)
+}
+
+
+a {
+    text-decoration: none;
+    color: #0077b5;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Header Section */
+.profile-header {
+    text-align: center;
+    position: relative;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #333;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Profile Info */
+.profile-info {
+    margin-top: 80px;
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.81);
+}
+
+/* Bio Section */
+.bio-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bio {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #0077b5;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #005582;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.like-posts {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Navigation Tabs */
+.profile-nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tab-btn {
+    color: rgba(255, 255, 255, 0.81);
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.content-section.active {
+    display: block;
+    opacity: 1;
+}
+
+.post-card {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.51);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.post-card h2 {
+    color: rgba(255, 255, 255, 0.81);
+}
+
+
+.post-card img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.post-info {
+    flex: 1;
+}
+
+.read-more-btn {
+    background-color: #0077b5;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #005582;
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new-post-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s;
+}
+
+.new-post-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-profile-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s;
+}
+
+.edit-profile-btn:hover {
+    background-color: #0069d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* edit profile css */
+/* Form Section */
+.edit-profile-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.edit-profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.81);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.81);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #444;
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid #0077b5;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background-color: #28a745;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        margin-top: 50px;
+    }
+
+    .bio {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+
+    .banner-img {
+        height: 150px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .edit-profile-form {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+}
