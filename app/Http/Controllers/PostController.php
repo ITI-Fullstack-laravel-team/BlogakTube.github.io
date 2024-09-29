@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Comment;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Facade;
 
 class PostController extends Controller
 {
@@ -49,23 +51,46 @@ class PostController extends Controller
     }
 
 
+    // public function store(Request $request)
+    // {
+    //     //للتاكد
+    //     // dd($request->name);
+
+    //     // $post = new Post();
+    //     // $post->post_title = $request->ptitle;
+    //     // $post->post_body = $request->pbody;
+    //     // $imagePath = $request->pfile->store('posts');
+    //     Post::create([
+    //         'post_title' => $request->ptitle,
+    //         'post_body' => $request->pbody,
+    //         // 'post_image' => $imagePath,
+    //     ]);
+    //     // $post->save();
+    //     return redirect(route('post.index'));
+    // }
+
+    
+
     public function store(Request $request)
     {
-        //للتاكد
-        // dd($request->name);
-
-        // $post = new Post();
-        // $post->post_title = $request->ptitle;
-        // $post->post_body = $request->pbody;
-        // $imagePath = $request->pfile->store('posts');
-        Post::create([
-            'post_title' => $request->ptitle,
-            'post_body' => $request->pbody,
-            // 'post_image' => $imagePath,
+        $validatedData = $request->validate([
+            'post_title' => 'required|string|max:255',
+            'post_body' => 'required',
         ]);
-        // $post->save();
-        return redirect(route('post.index'));
+    
+        // Save the post for the authenticated user
+        Post::create([
+            'user_id' => Auth::id(),  
+            'post_title' => $validatedData['post_title'],
+            'post_body' => $validatedData['post_body'],
+        ]);
+        
+    
+        return redirect()->route('profile.show', 1); 
     }
+    
+    
+
 
     public function showPostPage(string $id)
     {

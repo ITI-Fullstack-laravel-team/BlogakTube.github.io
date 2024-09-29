@@ -16,6 +16,12 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    // dwefine relationship with the favorites Posts
+    public function favorites()
+    {
+      
+        return $this->belongsToMany(Post::class, 'favorites');
+    }
     public function comments()
     {
         return $this->hasMany(Comment::class);
@@ -31,12 +37,8 @@ class User extends Authenticatable
         'name', 'username', 'location', 'bio', 'facebook', 'instagram', 'twitter', 'github', 'linkedin',
     ];
     
-    // dwefine relationship with the favorites Posts
-    public function favorites()
-    {
-        return $this->belongsToMany(Post::class, 'favorites');
-    }
     
+
     
 
     /**

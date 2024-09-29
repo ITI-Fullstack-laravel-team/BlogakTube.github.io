@@ -1,21 +1,20 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
     // Showing the profile page
     public function show($id)
     {
-        // Fetch the user by id
-        $user = User::with('favorites')->findOrFail($id);
-
-        // Return the view with user data
-        return view('profile.show', compact('user'));
+        $user = User::findOrFail($id); // Get the user whose profile you're viewing
+        $authUser = Auth::user(); // Get the authenticated user
+    
+        return view('profile.show', compact('user', 'authUser'));
     }
-
     // Show the edit profile form
     public function edit($id)
     {
@@ -29,13 +28,10 @@ class ProfileController extends Controller
     // Handle the update form submission
     public function update(Request $request, $id)
     {
-
-        // Validate and update user profile here
-
         // 1) Fetch the user by id
         $user = User::findOrFail($id);
 
-        //2) Validate the request
+        // 2) Validate the request
         $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users,username,' . $user->id,
@@ -48,7 +44,7 @@ class ProfileController extends Controller
             'linkedin' => 'nullable|url',
         ]);
 
-        // finally Update user data
+        // Update user data
         $user->update($request->all());
 
         // Redirect back to the profile page with success message
