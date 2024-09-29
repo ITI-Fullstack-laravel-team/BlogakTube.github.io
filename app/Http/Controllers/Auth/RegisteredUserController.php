@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Validator;
+
 
 class RegisteredUserController extends Controller
 {
@@ -21,6 +23,7 @@ class RegisteredUserController extends Controller
     {
         return view('auth.register');
     }
+
 
     /**
      * Handle an incoming registration request.
@@ -33,12 +36,23 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'gender' => 'required', 'in:male,female',
         ]);
+        $validator = Validator::make($request->all(), [
+            'password' => 'required|min:8',
+            'password_confirmation' => 'required|same:password',
+        ]);
+
+        // Check if validation fails
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'gender' => $request['gender'],
         ]);
 
         event(new Registered($user));
