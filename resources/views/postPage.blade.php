@@ -40,26 +40,22 @@
                         <div class="user">
                             <h4 class="Username">User22</h4>
                             <h4 class="userBio">Founder & CEO Revenue | Get a consistent of leads with content....</h4>
-                            <h5 class="Date">11:3 Am Tuesday Seb 2024</h5>
+                            <h5 class="Date">{{$post->created_at}}</h5>
 
                         </div>
                     </div>
                     <div class="postText">
 
                         <div class="editAndDeletePost">
-                            <img src="{{asset('../Media/images/postPage Images/editing.png')}}" alt="" class="editPostIcon">
-                            <img src="{{asset('../Media/images/postPage Images/delete.png')}}" alt="" class="deletePostIcon">
+                            <a href="/post/edit/{{$post->id}}"><img src="{{asset('../Media/images/postPage Images/editing.png')}}" alt="" class="editPostIcon"></a>
+                            <a href="/post/delete/{{$post->id}}"><img src="{{asset('../Media/images/postPage Images/delete.png')}}" alt="" class="deletePostIcon"></a>
+                            
                         </div>
 
-                        <h2 class="postTitle">Our New Blog Post Blog (BLOGAKTUBE)</h2>
+                        <h2 class="postTitle">{{$post->post_title}}</h2>
 
-                        <h4 class="postDescription">Welcome to our new blog, BLOGAKTUBE! We are excited to share this
-                            project with you and look forward to creating a vibrant community focused on topics that
-                            matter to you.</h4>
-                        <h4 class="postDescription">What is BLOGAKTUBE?
-                            BLOGAKTUBE is a blogging platform aimed at providing diverse and engaging content across
-                            multiple fields. Whether you're looking for tech tips, lifestyle ideas, or cultural
-                            articles, we are here to cater to your interests.</h4>
+                        <h3 class="postDescription">{{$post->post_body}}</h3>
+                        
                     </div>
                     <img src="{{asset('../Media/images/postPage Images/postImage.png')}}" alt="" class="postImage">
 

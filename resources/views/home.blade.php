@@ -32,49 +32,27 @@
             <div class="heading">
                 <h1>All Blogs</h1>
                 <button class="creation">
-                    <a href="{{asset('./CreatePost.html')}}">
+                    <a href="{{route('post.create')}}">
                         Create Blog
                     </a>
                 </button>
             </div>
 
             <div class="pop-posts">
+
+                @foreach ($posts as $post)
                 <div class="post-box">
-                    <img src="{{asset('../Media/images/post-thumbnail.jpg')}}" alt
-                        onerror="this.onerror=null; this.src='../Media/images/post-thumbnail.jpg'">
-                    <h2>Shahd's Blog</h2>
-                    <p>Hello! here i will share a blog</p>
+                    {{-- <img src="{{asset('storage/app/public/image'.$post->post_image)}}" alt="{{$post->post_title}}"> --}}
+                    <h2>{{$post->post_title}}</h2>
+                    <p>{{$post->post_body}}</p>
                     <div class="middle">
                         <button>
-                            <a href="{{asset('./postPage.html')}}">Read More</a>
+                            <a href="{{route('post.showPostPage' , $post->id)}}">Read More</a>
                         </button>
                     </div>
 
                 </div>
-                <div class="post-box">
-                    <img src="{{asset('../Media/images/post-thumbnail.jpg')}}" alt
-                        onerror="this.onerror=null; this.src='{{asset('../Media/images/post-thumbnail.jpg')}}'">
-                    <h2>Shahd's Blog</h2>
-                    <p>Hello! here i will share a blog</p>
-                    <div class="middle">
-                        <button>
-                            <a href="{{asset('./postPage.html')}}">Read More</a>
-                        </button>
-                    </div>
-
-                </div>
-                <div class="post-box">
-                    <img src="{{asset('../Media/images/post-thumbnail.jpg')}}" alt
-                        onerror="this.onerror=null; this.src='{{asset('../Media/images/post-thumbnail.jpg')}}'">
-                    <h2>Shahd's Blog</h2>
-                    <p>Hello! here i will share a blog</p>
-                    <div class="middle">
-                        <button>
-                            <a href="{{asset('./postPage.html')}}">Read More</a>
-                        </button>
-                    </div>
-
-                </div>
+                @endforeach
             </div>
 
         </div>

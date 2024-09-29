@@ -33,10 +33,11 @@
   <center>
     <div class="form-container">
       <h2>Create Post</h2>
-      <form id="postForm" action="{{asset('/Frontend/html/home.html')}}">
-        <input type="text" id="postTitle" placeholder="Post Title" required>
-        <textarea id="postContent" placeholder="Post Content" required></textarea>
-        <input type="file" id="uploadfile"><br><br><br>
+      <form id="postForm" action="{{route('post.store')}}" method='post'>
+        @csrf
+        <input type="text" id="postTitle" placeholder="Post Title" required name="ptitle">
+        <textarea id="postContent" placeholder="Post Content" required name="pbody"></textarea>
+        <input type="file" id="uploadfile" name="pfile"><br><br><br>
         <input type="submit" value="Create Post">
       </form>
     </div>

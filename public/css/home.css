@@ -59,6 +59,8 @@ p {
 .pop-posts {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 .post-box {
@@ -66,7 +68,7 @@ p {
     flex-direction: column;
     height: 500px;
     width: 400px;
-    display: inline-block;
+    /* display: inline-block; */
     margin: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 5px rgb(175, 172, 172);
@@ -78,11 +80,6 @@ p {
 
 }
 
-.pop-posts {
-    padding: 0 50px;
-    overflow: auto;
-    white-space: nowrap;
-}
 
 .pop-posts img {
     width: 100%;

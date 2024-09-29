@@ -29,3 +29,13 @@ Route::put('/profile/{id}/edit', [ProfileController::class, 'update'])->name('pr
 
 
 require __DIR__.'/auth.php';
+
+// post controller
+Route::get('/post', [PostController::class, 'index'])->name('post.index');
+Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
+Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+Route::get('/post/details/{id}', [PostController::class, 'showPostPage'])->name('post.showPostPage');
+Route::get('/post/delete/{id}', [postController::class, 'delete']);
+Route::put('/post/update/{id}', [postController::class, 'update']);
+Route::get('/post/edit/{id}', [postController::class, 'edit']);
+

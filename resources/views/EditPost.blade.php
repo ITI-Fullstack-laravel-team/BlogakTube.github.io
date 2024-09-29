@@ -31,16 +31,19 @@
   <center>
     <div class="form-container">
       <h2>Edit Post</h2>
-      <form action="{{asset('/edit-post')}}">
-        <input type="text" name="title" value="Current Post Title" required>
-        <textarea name="content" required>Current Post Content</textarea>
+      <form action="/post/update/{{$post->id}}" method="post">
+        @csrf
+        @method('put')
+        <input type="text" name="ptitle"  required value="{{$post->post_title}}">
+        <textarea name="pbody" required  >{{$post->post_body}}</textarea>
         <input type="file" name="uploadfile" id="uploadfile"><br><br>
         <input type="submit" value="Save Changes">
 
+
+      </form> 
         <div class="post-actions">
           <button class="discard-btn">Discard</button>
         </div>
-      </form>
     </div>
   </center>
   <!-- <div class="post-list">
