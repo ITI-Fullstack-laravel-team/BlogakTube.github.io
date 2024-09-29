@@ -10,11 +10,16 @@ class ProfileController extends Controller
     // Showing the profile page
     public function show($id)
     {
-        $user = User::findOrFail($id); // Get the user whose profile you're viewing
-        $authUser = Auth::user(); // Get the authenticated user
-    
+        // Find the user whose profile is being viewed
+        $user = User::findOrFail($id);
+        
+        // For testing purposes, pretend user ID 1 is the authenticated user
+        $authUser = User::find(1); // Assuming user with ID 1 exists
+
+        // Pass both the user and the "authUser" to the view
         return view('profile.show', compact('user', 'authUser'));
     }
+    
     // Show the edit profile form
     public function edit($id)
     {
